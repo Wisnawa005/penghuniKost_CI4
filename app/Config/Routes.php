@@ -33,7 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'View::index');
 
-$routes->get('/penghuni/(:segment)', 'Penghuni::detail/$1');
+$routes->get('/penghuni/create', 'Penghuni::create');
+$routes->delete('/penghuni/(:num)', 'Penghuni::delete/$1');
+$routes->get('/penghuni/edit(:segment)', 'Penghuni::edit/$1');
+$routes->get('/penghuni/(:any)', 'Penghuni::detail/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

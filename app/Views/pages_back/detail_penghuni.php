@@ -13,25 +13,30 @@
 
                         <img class="avatar border-gray" src="<?= base_url() . '/upload/person/' . $penghuni['image_person']; ?>" alt="gambar_orang">
                         <h5 class="title"><?= $penghuni['name']; ?></h5>
-
+                        <hr>
                         <p class="description">
                             <?= $penghuni['status']; ?>
                         </p>
+                        <p class="mr-auto text-center">
+                            <?= $penghuni['alamat']; ?>
+                        </p>
+                        <p class="mr-auto text-center">
+                            <i class="nc-icon nc-badge"></i> <?= $penghuni['no_hp']; ?>
+                        </p>
                     </div>
-                    <p class="description text-center">
-                        <?= $penghuni['alamat']; ?>
-                    </p>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer text-center">
                     <hr>
-                    <div class="button-container">
-                        <div class="row">
+                    <!-- update data -->
+                    <a href="/Penghuni/edit/<?= $penghuni['slug']; ?>" class="btn btn-outline-warning"><i class="nc-icon nc-ruler-pencil"></i></a>
 
-                            <div class="col-lg-12 mr-auto">
-                                <h5><?= $penghuni['no_hp']; ?><small>Spent</small></h5>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- delete data -->
+                    <form action="/penghuni/<?= $penghuni['id']; ?>" method="POST" class="d-inline">
+                        <!-- digunakan supaya todal di haccking  lalu dibuat routes baru-->
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-outline-danger"><i class="nc-icon nc-basket"></i></button>
+                    </form>
                 </div>
             </div>
 

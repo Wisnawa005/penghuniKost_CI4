@@ -57,8 +57,16 @@
 
                                         <td>
                                             <a href="/penghuni/<?= $val['slug']; ?>" class="btn btn-outline-primary"><i class="nc-icon nc-badge"></i></a>
-                                            <a href="/Penghuni/edit" class="btn btn-outline-warning"><i class="nc-icon nc-ruler-pencil"></i></a>
-                                            <a href="/Penghuni/delete" class="btn btn-outline-danger"><i class="nc-icon nc-basket"></i></a>
+                                            <a href="/Penghuni/edit/<?= $val['slug']; ?>" class="btn btn-outline-warning"><i class="nc-icon nc-ruler-pencil"></i></a>
+                                            <form action="/penghuni/<?= $val['id']; ?>" method="POST" class="d-inline">
+                                                <!-- digunakan supaya todal di haccking  lalu dibuat routes baru-->
+                                                <?= csrf_field(); ?>
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-outline-danger" onclick="return confirm('apakan anda yakin ingin mengapusnya ?');"><i class="nc-icon nc-basket"></i></button>
+                                            </form>
+                                            <!-- cara delete per id dengan secara default,
+                                            dengan kelemahan bisa di hapus manual -->
+                                            <!-- <a href="/Penghuni/delete" class="btn btn-outline-danger"><i class="nc-icon nc-basket"></i></a> -->
 
                                         </td>
                                     </tr>

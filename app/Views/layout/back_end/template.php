@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('back_end/assets/img/apple-icon.png') ?>">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('back_end/assets/img/favicon.png') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('/favicon.ico') ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         <?= $title; ?>
@@ -24,9 +24,9 @@
     <div class="wrapper ">
         <div class="sidebar" data-color="white" data-active-color="danger">
             <div class="logo">
-                <a href="<?= site_url('admin'); ?>" class="simple-text logo-mini">
+                <a href="<?= base_url('admin'); ?>" class="simple-text logo-mini">
                     <div class="logo-image-small">
-                        <img src="../assets/img/logo-small.png">
+                        <img src="<?= base_url('back_end/assets/img/favicon.png') ?>">
                     </div>
                     <!-- <p>CT</p> -->
                 </a>
@@ -71,7 +71,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="javascript:;">Paper Dashboard 2</a>
+
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -169,6 +169,23 @@
             demo.initChartsPages();
         });
     </script>
+    <!-- <script>
+        function priviewImagePerson() {
+            const person = document.querySelector('#image_person');
+            const personLabel = document.querySelector('.form-label');
+            const imgPriview = document.querySelector('.img-perview');
+
+            personLabel.textContent = person.files[0].name;
+
+            const filePerson = new FileReader();
+            filePerson.readAsDataURL(person.files[0]);
+
+            filePerson.onload = function(e) {
+                imgPriview.src = e.target.result;
+            }
+
+        }
+    </script> -->
 </body>
 
 </html>
