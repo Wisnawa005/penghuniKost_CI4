@@ -35,7 +35,7 @@
                         <!-- digunakan supaya todal di haccking  lalu dibuat routes baru-->
                         <?= csrf_field(); ?>
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="btn btn-outline-danger"><i class="nc-icon nc-basket"></i></button>
+                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('apakan anda yakin ingin mengapusnya ?');"><i class="nc-icon nc-basket"></i></button>
                     </form>
                 </div>
             </div>

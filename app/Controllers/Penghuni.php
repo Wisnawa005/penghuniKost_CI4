@@ -30,7 +30,10 @@ class Penghuni extends BaseController
         // $penghuni = $this->penghuniModel->getPenghuni($slug);
         $data = [
             'title' => 'Detail Penghuni Kost',
-            'penghuni' => $this->penghuniModel->getPenghuni($slug)
+            'penghuni' => $this->penghuniModel->getPenghuni($slug),
+            //'penghuni' => $this->penghuniModel->paginate(5),
+            'pager' => $this->penghuniModel->pager
+
         ];
 
         //jika detail penghuni tidak ditemukan
