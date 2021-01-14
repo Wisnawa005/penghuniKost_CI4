@@ -42,9 +42,7 @@
             <nav class="nav-menu d-none d-lg-block">
 
                 <ul>
-                    <li class="active"><a href="<?= base_url('view'); ?>">Home</a></li>
-
-
+                    <li><a href="<?= base_url('view'); ?>">Home</a></li>
 
                     <li><a href="<?= base_url('view/about'); ?>">About</a></li>
 
@@ -97,7 +95,8 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Wisnawa</span></strong>. All Rights Reserved
+                &copy;
+                Copyright <?= date('Y') ?> <strong><span>Wisnawa</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->

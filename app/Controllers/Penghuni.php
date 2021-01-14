@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PenghuniModel;
-use CodeIgniter\Validation\Rules;
+//use CodeIgniter\Validation\Rules;
 
 class Penghuni extends BaseController
 {

@@ -53,3 +53,5 @@ $routes->get('/penghuni/(:any)', 'Penghuni::detail/$1');
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+
+$routes->resource('services');
